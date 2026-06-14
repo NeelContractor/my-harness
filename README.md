@@ -1,4 +1,4 @@
-# 🤖 My Harness
+# My Harness
 
 A fully-featured AI agent harness built from scratch in Python — no LangChain, no frameworks, just clean layered code.
 
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-Add your OpenRouter API key to `layer_01/.env`:
+Add your OpenRouter API key to root `.env`:
 ```
 OPENROUTER_API_KEY=sk-or-v1-your-key-here
 ```
