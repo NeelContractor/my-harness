@@ -16,23 +16,23 @@ A fully-featured AI agent harness built from scratch in Python — no LangChain,
 
 ## Setup
 
-\`\`\`bash
+```bash
 git clone <your-repo>
 cd my-harness
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 pip install -e .
-\`\`\`
+```
 
 Add your OpenRouter API key to `layer_01/.env`:
-\`\`\`
+```
 OPENROUTER_API_KEY=sk-or-v1-your-key-here
-\`\`\`
+```
 
 ## Usage
 
-\`\`\`bash
+```bash
 # Single task
 harness "explain how TCP works"
 
@@ -56,7 +56,7 @@ harness --delete-session 2026-06-14_12-00-00
 
 # File watcher daemon
 python3 layer_11/daemon.py
-\`\`\`
+```
 
 ## Architecture
 
@@ -78,7 +78,7 @@ Each layer builds on the previous without modifying it:
 
 ## Project layout
 
-\`\`\`
+```
 my-harness/
 ├── harness.py          # CLI entrypoint
 ├── setup.py            # packaging
@@ -121,7 +121,7 @@ my-harness/
     ├── watcher.py
     ├── reactions.py
     └── daemon.py
-\`\`\`
+```
 
 ## Extending
 
@@ -135,9 +135,9 @@ Edit `layer_07/orchestrator.py`, add to `SPECIALISTS`.
 Edit `layer_11/reactions.py`, add a new extension to `REACTIONS`.
 
 **Switch models:**
-\`\`\`bash
+```bash
 harness --model anthropic/claude-3-5-haiku-20241022 "your task"
-\`\`\`
+```
 
 ## Requirements
 
