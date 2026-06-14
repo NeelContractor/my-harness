@@ -25,7 +25,7 @@ class MemoryStore:
     def _conn(self):
         return sqlite3.connect(self.db_path)
 
-    def save(self, content: str, tags: list[str] = None) -> int:
+    def save(self, content: str, tags: list[str] | None = None) -> int:
         """Save a memory. Returns the new row id."""
         tags_str = ",".join(tags or [])
         now = datetime.utcnow().isoformat()
@@ -34,6 +34,7 @@ class MemoryStore:
                 "INSERT INTO memories (content, tags, created_at) VALUES (?, ?, ?)",
                 (content, tags_str, now)
             )
+            assert cur.lastrowid is not None
             return cur.lastrowid
 
     def search(self, query: str, limit: int = 5) -> list[dict]:

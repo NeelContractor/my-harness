@@ -12,7 +12,7 @@ from layer_02.tools import ToolRegistry, build_default_registry
 load_dotenv(os.path.join(os.path.dirname(__file__), '..', 'layer_01', '.env'))
 
 class AgentLoop:
-    def __init__(self, model: str = None, registry: ToolRegistry = None):
+    def __init__(self, model: str | None = None, registry: ToolRegistry | None = None):
         self.client = LLMClient(model) if model else LLMClient()
         self.registry = registry or build_default_registry()
 

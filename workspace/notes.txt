@@ -1,0 +1,6 @@
+Meeting notes from June 14:
+- Discussed new product roadmap for Q3
+- Team agreed to prioritize mobile app over web dashboard
+- Budget approved for 3 new hires in engineering
+- Next meeting scheduled for June 21
+- Action items: Neel to send API docs by Friday

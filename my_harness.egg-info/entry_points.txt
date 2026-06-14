@@ -1,0 +1,2 @@
+[console_scripts]
+harness = layer_10.cli:main

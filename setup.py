@@ -1,0 +1,21 @@
+# setup.py
+from setuptools import setup, find_packages
+
+setup(
+    name="my-harness",
+    version="1.0.0",
+    description="A layered AI agent harness built from scratch",
+    packages=find_packages(),
+    python_requires=">=3.10",
+    install_requires=[
+        "httpx>=0.27.0",
+        "python-dotenv>=1.0.0",
+        "beautifulsoup4>=4.12.0",
+        "watchdog>=4.0.0",
+    ],
+    entry_points={
+        "console_scripts": [
+            "harness=layer_10.cli:main",
+        ],
+    },
+)

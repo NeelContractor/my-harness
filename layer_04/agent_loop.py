@@ -11,7 +11,7 @@ from layer_01.llm_client import SYSTEM_PROMPT
 MEMORY_SEARCH_THRESHOLD = 10  # below this count, just inject all memories
 
 class MemoryAgentLoop(ContextAwareAgentLoop):
-    def __init__(self, model: str = None, max_tokens: int = 6000):
+    def __init__(self, model: str | None = None, max_tokens: int = 6000):
         super().__init__(model, max_tokens)
         self.memory = MemoryStore()
         self._register_memory_tools()

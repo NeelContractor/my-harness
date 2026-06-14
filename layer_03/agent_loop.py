@@ -10,7 +10,7 @@ from layer_03.context import ContextWindow
 from layer_01.llm_client import SYSTEM_PROMPT
 
 class ContextAwareAgentLoop(AgentLoop):
-    def __init__(self, model: str = None, max_tokens: int = 6000):
+    def __init__(self, model: str | None = None, max_tokens: int = 6000):
         super().__init__(model)
         self.context = ContextWindow(max_tokens=max_tokens)
 

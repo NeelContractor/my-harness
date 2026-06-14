@@ -1,0 +1,14 @@
+{
+  "session_id": "2026-06-14_13-10-32",
+  "updated_at": "2026-06-14T07:40:41.820992",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Relevant memories from past sessions:\n- [2026-06-13] User name: Neel; prefers concise answers."
+    },
+    {
+      "role": "user",
+      "content": "hello"
+    }
+  ]
+}

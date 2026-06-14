@@ -1,0 +1,8 @@
+README.md
+setup.py
+my_harness.egg-info/PKG-INFO
+my_harness.egg-info/SOURCES.txt
+my_harness.egg-info/dependency_links.txt
+my_harness.egg-info/entry_points.txt
+my_harness.egg-info/requires.txt
+my_harness.egg-info/top_level.txt

@@ -3,13 +3,14 @@ import subprocess
 import os
 import json
 from dataclasses import dataclass
+from typing import Callable
 
 @dataclass
 class Tool:
     name: str
     description: str
     parameters: dict
-    fn: callable
+    fn: Callable[..., str]
 
     def to_schema(self) -> dict:
         """Convert to OpenAI-compatible tool schema."""
