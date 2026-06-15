@@ -22,7 +22,8 @@ cd my-harness
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-pip install -e .
+pip install -e . # install global
+pip uninstall my-harness # uninstall global
 ```
 
 Add your OpenRouter API key to root `.env`:
