@@ -1,0 +1,58 @@
+{
+  "session_id": "2026-06-15_17-18-22",
+  "updated_at": "2026-06-15T11:48:35.123347",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Relevant memories from past sessions:\n- [2026-06-13] User name: Neel; prefers concise answers."
+    },
+    {
+      "role": "user",
+      "content": "what is the weather in Tokyo"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "type": "function",
+          "index": 0,
+          "id": "chatcmpl-tool-a517601a68f48956",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\n  \"query\": \"current weather Tokyo\",\n  \"max_results\": 5\n}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-a517601a68f48956",
+      "content": "1. Tokyo, Tokyo, Japan Current Weather | AccuWeather\n   www.accuweather.com/en/jp/tokyo/226396/current-weather/226396\n   CurrentweatherinTokyo,Tokyo, Japan. Checkcurrentconditions inTokyo,Tokyo, Japan with radar, hourly, and more.\n\n2. Weather Forecast and Conditions for Tokyo, Tokyo Prefecture, Japan ...\n   weather.com/weather/today/l/4ba28384e2da53b2861f5b5c70b7332e4ba1dc83e75b948e6fbd2aaceeeceae3\n   Today's and tonight'sTokyo,TokyoPrefecture, Japanweatherforecast,weatherconditions and Doppler radar from TheWeatherChannel andWeather.com\n\n3. Tokyo, Japan Weather Forecast\n   www.weather-forecast.com/locations/Tokyo-1/forecasts/latest\n   Providing a local hourlyTokyo(T\u014dky\u014d)weatherforecast of rain, sun, wind, humidity and temperature. The Long-range 12 day forecast also includes detail forTokyo(T\u014dky\u014d)weathertoday. Liveweatherreports fromTokyo(T\u014dky\u014d)weatherstations andweatherwarnings that include risk of thunder, high UV index and forecast gales.\n\n4. Tokyo, 13, JP Current Weather - The Weather Network\n   www.theweathernetwork.com/en/city/jp/tokyo/tokyo/current\n   GetTokyo, 13, JPcurrentweatherreport with temperature, feels like, wind, humidity, pressure, UV and more from TheWeatherNetwork.com.\n\n5. Today's Weather in Tokyo - Hourly Forecast and Conditions\n   www.easeweather.com/asia/japan/tokyo/today\n   Get the latest hourlyweatherupdates forTokyotoday. Detailed forecast including temperature, wind, rain, snow, and UV index. Stay informed about today'sweatherconditions inTokyo.\n"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "type": "function",
+          "index": 0,
+          "id": "chatcmpl-tool-9757cdd77bd420f7",
+          "function": {
+            "name": "web_fetch",
+            "arguments": "{\n  \"url\": \"https://wttr.in/Tokyo?format=3\"\n}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-9757cdd77bd420f7",
+      "content": "wttr.in \u2014 Weather Report\nTokyo: \ud83c\udf24\ufe0f  +20\u00b0C"
+    },
+    {
+      "role": "assistant",
+      "content": "Tokyo\u2019s current weather: \ud83c\udf24\ufe0f\u202f~20\u202f\u00b0C."
+    }
+  ]
+}

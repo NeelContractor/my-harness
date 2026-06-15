@@ -9,7 +9,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from layer_01.llm_client import LLMClient, SYSTEM_PROMPT
 from layer_02.tools import ToolRegistry, build_default_registry
 
-load_dotenv(os.path.join(os.path.dirname(__file__), '..', 'layer_01', '.env'))
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+load_dotenv(os.path.join(_PROJECT_ROOT, '.env'))
 
 class AgentLoop:
     def __init__(self, model: str | None = None, registry: ToolRegistry | None = None):

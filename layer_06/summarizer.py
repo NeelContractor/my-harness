@@ -8,7 +8,8 @@ from dotenv import load_dotenv
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from layer_01.llm_client import LLMClient, SYSTEM_PROMPT
 
-load_dotenv(os.path.join(os.path.dirname(__file__), '..', 'layer_01', '.env'))
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+load_dotenv(os.path.join(_PROJECT_ROOT, '.env'))
 
 SUMMARIZE_PROMPT = """You are summarizing a conversation between a user and an AI assistant.
 Produce a concise summary (3-6 sentences) covering:

@@ -9,7 +9,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from layer_02.tools import build_default_registry, ToolRegistry
 from layer_01.llm_client import LLMClient
 
-load_dotenv(os.path.join(os.path.dirname(__file__), '..', 'layer_01', '.env'))
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+load_dotenv(os.path.join(_PROJECT_ROOT, '.env'))
 
 class SubAgent:
     """
