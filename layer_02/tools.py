@@ -79,6 +79,11 @@ def write_file(path: str, content: str) -> str:
     except Exception as e:
         return f"Error writing file: {e}"
 
+def get_current_time() -> str:
+    """Return the current date and time."""
+    from datetime import datetime
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
 
 def build_default_registry() -> ToolRegistry:
     registry = ToolRegistry()
@@ -121,6 +126,17 @@ def build_default_registry() -> ToolRegistry:
             "required": ["path", "content"]
         },
         fn=write_file,
+    ))
+
+    registry.register(Tool(
+        name="get_current_time",
+        description="Get the current date and time.",
+        parameters={
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        fn=get_current_time,
     ))
 
     return registry

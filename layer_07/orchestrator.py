@@ -24,6 +24,10 @@ SPECIALISTS = {
         "goal": "Execute shell commands and return their output.",
         "description": "Runs shell commands and reports results",
     },
+    "tester": {
+        "goal": "Write and run unit tests for code, report pass/fail results.",
+        "description": "Writes and executes tests for code",
+    },
 }
 
 class Orchestrator:

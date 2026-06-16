@@ -28,6 +28,16 @@ REACTIONS: dict[str, str] = {
         "Summarize the data: how many rows, what columns, any patterns. "
         "Save the analysis to '{filename}.analysis.md'."
     ),
+    ".js": (
+        "Review the JavaScript file at '{path}'. "
+        "Check for bugs and modern best practices. "
+        "Save feedback to '{filename}.review.md'."
+    ),
+    ".ts": (
+        "Review the TypeScript file at '{path}'. "
+        "Check for bugs and modern best practices. "
+        "Save feedback to '{filename}.review.md'."
+    ),
 }
 
 DEFAULT_REACTION = (

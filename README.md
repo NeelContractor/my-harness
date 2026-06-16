@@ -22,8 +22,8 @@ cd my-harness
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-pip install -e . # install global
-pip uninstall my-harness # uninstall global
+pip install -e . # install as a global `harness` command
+pip uninstall my-harness # uninstall global command
 ```
 
 Add your OpenRouter API key to root `.env`:
@@ -122,22 +122,6 @@ my-harness/
     ├── watcher.py
     ├── reactions.py
     └── daemon.py
-```
-
-## Extending
-
-**Add a new tool:**
-Edit `layer_02/tools.py`, register it in `build_default_registry()`.
-
-**Add a new sub-agent specialist:**
-Edit `layer_07/orchestrator.py`, add to `SPECIALISTS`.
-
-**Add a new file reaction:**
-Edit `layer_11/reactions.py`, add a new extension to `REACTIONS`.
-
-**Switch models:**
-```bash
-harness --model anthropic/claude-3-5-haiku-20241022 "your task"
 ```
 
 ## Requirements
